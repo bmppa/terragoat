@@ -28,8 +28,8 @@ jobs:
       env:
           PRISMA_API_URL: https://api0.prismacloud.io
       with:
-        api-key: ${{ secrets.PRISMA_CLOUD_API_KEY_0 }}
-        directory: terraform/
+        api-key: ${{ secrets.PRISMA_CLOUD_API_KEY }}
+        directory: .
         # check: CKV_AWS_1                # optional: run only a specific check_id. can be comma separated list
         # skip_check: CKV_AWS_1           # optional: skip a specific check_id. can be comma separated list
         # soft_fail: false                  # optional: if true, runs checks without failing build
@@ -37,6 +37,6 @@ jobs:
         output_format: cli                # optional: The format of the output - json - cli - sarif
         # quiet: true                     # display only failed checks
         # external_checks_dir: ./checkov  # directory for custom checks to be loaded
-        # download_external_modules: true # optional: download external terraform modules from public git repositories and terraform registry
+        download_external_modules: true   # optional: download external terraform modules from public git repositories and terraform registry
         # log_level: DEBUG                # optional: set log level. Default WARNING
         use_enforcement_rules: true
