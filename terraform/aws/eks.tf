@@ -140,6 +140,7 @@ resource aws_eks_cluster "eks_cluster" {
   }
 }
 
+// test
 output "endpoint" {
   value = "${aws_eks_cluster.eks_cluster.endpoint}"
 }
